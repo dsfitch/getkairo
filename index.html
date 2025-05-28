@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>kairo.ai | Redacted Notice</title>
+  <style>
+    body {
+      background-color: #000814;
+      color: #00ffff;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      text-shadow: 0 0 10px #00ffff;
+      color: #00ffff;
+    }
+    h2 {
+      font-size: 1.4em;
+      margin-top: 20px;
+      color: #00bcd4;
+    }
+    .countdown {
+      margin-top: 15px;
+      font-size: 1.2em;
+      color: #ff1744;
+      font-weight: bold;
+    }
+    .content-box {
+      background-color: #001f33;
+      border: 1px solid #00bcd4;
+      padding: 20px;
+      margin-top: 30px;
+      display: inline-block;
+      max-width: 700px;
+      text-align: left;
+      box-shadow: 0 0 20px #00bcd4;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>kairo.ai | internal escalation</h1>
+  <h2>A compliance threshold has been breached</h2>
+  <div class="countdown" id="countdown">Calculating...</div>
+
+  <div class="content-box">
+    <p>A party formerly trusted with funds has failed to uphold even basic integrity. I gave every chance to resolve this quietly.</p>
+    <p>If the funds are not returned in good faith, a disclosure protocol will be initiated that includes, but is not limited to:</p>
+    <ul>
+      <li>Internal decks and IP documentation shared during Kairo prototype phase</li>
+      <li>Inconsistencies between verbal commitments and written agreements</li>
+      <li>Evidence of misrepresentation during investor communications</li>
+      <li>Failure to deliver product access after payment confirmation</li>
+      <li>Withdrawal from dialogue after fund transfer</li>
+      <li>A public and permanent free release of the platform — reengineered and fully accessible</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    kairo.ai redacted division • UTC synced<br>
+    "Silence isn't protection. It's evidence."
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const countdown = document.getElementById("countdown");
+      const targetDate = new Date("2025-05-31T00:00:00Z").getTime();
+      const interval = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+        if (distance < 0) {
+          clearInterval(interval);
+          countdown.innerHTML = "Release in progress...";
+          return;
+        }
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        countdown.innerHTML = "Time remaining before public release: " + hours + "h " + minutes + "m " + seconds + "s";
+      }, 1000);
+    });
+  </script>
+<!-- build v2 -->
+</body>
+</html>
